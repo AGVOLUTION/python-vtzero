@@ -9,8 +9,9 @@ with open("README.md") as f:
 
 ext_options = {
     'include_dirs': ['./vendor/vtzero/include', './vendor/protozero/include'],
-    'extra_compile_args': ['-O2', '-std=c++11']
+    'extra_compile_args': ['-O3', '-std=c++17']
 }
+
 ext_modules = cythonize([
     Extension('vtzero.tile', ['vtzero/tile.pyx'], language="c++", **ext_options)
 ])

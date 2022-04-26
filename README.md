@@ -5,7 +5,6 @@ Experimental Python wrapper of [vtzero](https://github.com/mapbox/vtzero) a mini
 [![Status](https://github.com/tilery/python-vtzero/workflows/CI/badge.svg)](https://github.com/tilery/python-vtzero/actions?query=workflow%3ACI)
 [![Packaging status](https://badge.fury.io/py/vtzero.svg)](https://badge.fury.io/py/vtzero)
 
-
 ## Requirements
 
 - Python >= 3.5

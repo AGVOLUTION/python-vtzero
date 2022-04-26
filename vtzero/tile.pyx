@@ -5,7 +5,8 @@
 from vtzero cimport cvtzero
 from libcpp.string cimport string
 from libc.stdint cimport uint32_t
-
+from libc.stdint cimport uint64_t
+import cython
 
 cdef class VectorTile:
 
@@ -136,7 +137,13 @@ cdef class Point:
     def set_point(self, x, y):
         self.builder.set_point(x, y)
 
-    def add_property(self, char* key, char* value):
+    def add_property_float(self, char *key, float value):
+        self.builder.add_property(key, value)
+
+    def add_property_string(self, char *key, char *value):
+        self.builder.add_property(key, value)
+
+    def add_property_uint64_t(self, char *key, uint64_t value):
         self.builder.add_property(key, value)
 
     def set_id(self, int id):
@@ -165,7 +172,13 @@ cdef class Polygon:
     def set_point(self, x, y):
         self.builder.set_point(x, y)
 
-    def add_property(self, char* key, char* value):
+    def add_property_float(self, char *key, float value):
+        self.builder.add_property(key, value)
+
+    def add_property_string(self, char *key, char *value):
+        self.builder.add_property(key, value)
+
+    def add_property_uint64_t(self, char *key, uint64_t value):
         self.builder.add_property(key, value)
 
     def set_id(self, int id):
@@ -191,7 +204,13 @@ cdef class Linestring:
     def set_point(self, x, y):
         self.builder.set_point(x, y)
 
-    def add_property(self, char* key, char* value):
+    def add_property_float(self, char *key, float value):
+        self.builder.add_property(key, value)
+
+    def add_property_string(self, char *key, char *value):
+        self.builder.add_property(key, value)
+
+    def add_property_uint64_t(self, char *key, uint64_t value):
         self.builder.add_property(key, value)
 
     def set_id(self, int id):
